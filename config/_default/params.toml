@@ -64,11 +64,12 @@ gravatar= false
   email = "dcao1123@gmail.com"
   address = "918 South Bend Dr. Durham, NC 27713, USA"
   # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
-  office_hours = """Monday 10:00 to 13:00<br>
-                    Wednesday 09:00 to 10:00<br>
-                    Otherwise email to book an appointment"""
+  #office_hours = """Monday 10:00 to 13:00<br>
+  #                 Wednesday 09:00 to 10:00<br>
+  #                  Otherwise email to book an appointment"""
   phone = "888 888 88 88"
   skype = "echo123"
+  weChat = "Heatshock90"
   telegram = ""
   keybase = ""  # Your keybase.io username.
 
