@@ -17,9 +17,9 @@ interests:
 - Data Science
 - Data Visualization
 - Data Analytics/Statistics
-- Clinical Trial/Drug Development
+- Drug Development
 - HVAC
-name: Dongsun Cao
+name: Dongsun Cao 
 organizations:
 - name: UCB Biosciencs
   url: ""
@@ -40,6 +40,6 @@ social:
 superuser: true
 ---
 
-Dongsun Cao is a programmer at UCB Biosciences. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Dongsun Cao is a programmer at UCB Biosciences. His interests include developing SAS programs for generating CDISC-compliant datasets SDTM and ADaM and tables, listings, and figures for NDA submission in the drug development. He is also involved in development of building data visualization tools using JMP scripting language (JSL) and Shiny (R) in clinical studies. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Dongsun Cao's hobby in his spare time is interested in the HVAC and car repairs. He has developed good working knowledge of principle of HVAC and has engaged in the repairing of HVAC system at home and his friends' houses. 

@@ -2,21 +2,21 @@
 active: true
 date_format: January 2006
 experience:
-- company: GenCoin
-  company_url: ""
+- company: UCB Biosciencs
+  company_url: "https://www.ucb.com/"
   date_end: ""
-  date_start: "2017-01-01"
-  description: "  Responsibilities include:\n  \n  * Analysing\n  * Modelling\n  *
+  date_start: "2012-09-19"
+  description: "  Responsibilities include:\n  \n  * Analysing\n  * Tool Building\n  *
     Deploying\n  "
-  location: California
-  title: CEO
-- company: University X
-  company_url: ""
-  date_end: "2016-12-31"
-  date_start: "2016-01-01"
-  description: Taught electronic engineering and researched semiconductor physics.
-  location: California
-  title: Professor
+  location: Raleigh, NC
+  title: Principle Statistical Programmer
+- company: University of North Carolina
+  company_url: "https://www.unc.edu/"
+  date_end: "2007-03-31"
+  date_start: "2002-08-01"
+  description: Studied Heart Development.
+  location: Chapel Hill, NC
+  title: Post-Doc Research Scientist
 subtitle: ""
 title: Experience
 weight: 8
