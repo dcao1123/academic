@@ -1,0 +1,36 @@
+---
+title: 'Shiny Application: Use of Cluster Anlysis to Detect Multiple Enrollments in
+  Clinical Trials'
+author: Dongsun Cao
+date: '2019-01-26'
+slug: shiny-application-use-of-cluster-anlysis
+categories:
+  - R
+tags: []
+image:
+  caption: ''
+  focal_point: ''
+---
+
+## Abstract
+Multiple enrollment refers to a practice of a patient taking part in a clinical trial at more than two sites within same study or in multiple studies within same clinical program.
+
+Patients seek multiple enrollments for a variety of reasons. Some seek more access to the study drugs while others are seeking additional compensations. Whatever reasons, multiple enrollments by a single patient at different sites in a study or across studies compromises the data integrity and jeopardizes the patient’s safety.
+
+A web application was developed to facilitate identification of possible multiple participation by same subjects using Shiny platform. In this application, subjects with identical date of birth are identified and their similarity measures are plotted against the birth dates using Plotly. Subjects are clustered based on the similarity measures. The bar graph of similarity measures against birth dates is used to select the subjects with same birth dates and to update the dendrogram to visualize the extent of their similarity with regard to the findings in domains LB, EG, and VS. Concurrently, the pattern of medical history and concomitant medications for selected subjects are demonstrated in the lower panel of the dashboard (Figure 1).
+
+
+```{r, echo=FALSE,out.width = "95%"}
+library(knitr)  
+include_graphics('/img/mddash.jpg') 
+
+```
+
+Figre 1. A Dashboard to Show Similarity Measures, Clusters, Medical History, and Conmmitant Medicaitons for Subejcts with Same Birth Dates
+
+From the Figure 1, subjects with same date of birth are identified in the bar graph.  Clicking on the bar will select the subject IDs and highlight cluster in the dendrogram allowing for visualization of extent of similarity. The two graphs in the lower panel compare the medical history and concomitant medication before they get enrolled.
+
+```{r, echo=FALSE, out.width = "95%"}
+
+include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MC_Drei-Finger-Faultier.jpg/330px-MC_Drei-Finger-Faultier.jpg")
+```
