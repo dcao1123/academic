@@ -12,22 +12,22 @@ image:
   focal_point: ''
 ---
 
-## Get Started:
+## **Get Started:**
 
 Putting up your personal web site in the internet is everyone's dream. There are numerous web site building platforms out there, like [Wix](https://www.wix.com/)  or [WordPress](<https://wordpress.com/>). Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.
 
 However, all those service comes with some of costs despite the cost may be minimal. You need to spend some to buy domain name and pay hosting service provider to host your web site. If you are in the business, you also need to pay for the business email address. if it is the first time for you build site and with purpose of sharing your knowledge, it is not worth doing that way. More importantly, those website building service would hide the coding from you, which is not desirable for programmers. 
 
-it had appeared to me that there are quite a few of coding languages you need to master before you can put up a nice web site in the internet. For example, basic languages include HTML, CSS and JavaScript. Regarding the back-end language, you probably need to learn of these PHP, Java or Python. But it become so easy to create a web site when you use **blogdown** . There is no need to buy domain name and pay hosting service. With simply 4 steps under 10 minutes, you can make your professional web site available to the world. 
+It had appeared to me that there are quite a few of coding languages you need to master before you can put up a nice web site in the internet. For example, basic languages include HTML, CSS and JavaScript. Regarding the back-end language, you probably need to learn of these PHP, Java or Python. But it become so easy to create a web site when you use **blogdown** . There is no need to buy domain name and pay hosting service. With simply 4 steps under 10 minutes, you can make your professional web site available to the world. 
  
 Below I am going to use 4 steps to show how to create a skeleton of website using Blogdown in R Studio. assuming you are a programmer and have a knowledge of R.  
 
-### Software requirements
+### Software Requirements
 
-Assume you have already installed R (https://www.r-project.org) [@R-base] and the RStudio IDE (https://www.rstudio.com). 
+Assume you have already installed R (https://www.r-project.org) [@R-base] and the RStudio IDE (https://www.rstudio.com). then do the following: 
 
-1. install Blogdown in Studio IDE 
-1. install Hugo
+1. Install package Blogdown in RStudio IDE 
+1. install package Hugo
 
 ```{r eval=FALSE}
 
@@ -47,7 +47,6 @@ blogdown::install_hugo()
 
 Assume that you already have an GitHub account. If you do not have the account, go to the GitHub <https://github.com/> and set up your account. It is free.
 Next, I am going to use 4 steps to show how to put up a skeleton of web site that is beautiful enough for you to deploy to the internet. Based on the skeleton website, you can work on R code (Markdown) to add contents to and modify your site continuously.   
-
 
 ###  Step 1: Create a repository in your GitHub account
 
@@ -73,10 +72,10 @@ include_graphics('/img/fig2_rProj.JPG')
 ```
 
 - **Repository URL**: copy the URL site from your repository in the GitHub here. 
-- **Project Reposition Name**: put down the directory name you want to call here. this is working folder that hold your files.
-- **Create Project as Subdirectory of**: The folder you want to place your project folder.
+- **Project Reposition Name**: put down directory name you want to call here. This is the working folder that hold your files.
+- **Create Project as Subdirectory of**: a folder you want to place under.
 
-Once you click the create Project, the repository will be cloned to your local machine, right now it is till empty.  next step is to create a website under the folder you just created. if you run it, then R will creare all the necessary file in your project folder.
+Once you click **Create Project**, the repository in your GitHub will be cloned to the folder in local machine. But it is still empty.  Next step is to build a web site files using hugo academic theme within the folder just created. Run the R statement below, a static web site will be generated as a result.
 
 
 ```{r eval=FALSE}
@@ -88,32 +87,33 @@ blogdown::new_site(theme = "gcushen/hugo-academic", theme_example = TRUE)
 ```
 
 
-then, got to menu Addins > Serve site.  You will see a website is created in the Viewer panel on the right panel.
+Then, go to menu Addins > Serve site.  You will see a website is created in the Viewer panel on the right panel.
 
-But this is a template site, you need to change the site name, menu, contact information to make it become your web site. Below is a minimal set of files you need to update.
+But this is a template which does not show your name and your blogs. You need to update them based on the temlpate files, YOu change site name, menu, contact information to make it become your web site. Below is a minimal set of files you need to update.
 
-1. Change to your biography and Picture: Go to content>author>admin folder and open _index.md file to update your biography including education, email address, organization, and short biography. In the same folder, change the avatar.jpg to your picture
-1. Change the contact information: Go to Config > _default folder. Open Params.toml and update the email, contact, phone for yours.
-1. Delete contents. if you do not want to display the talks you have given, go to content > home folder. Open file talks.md and edit the yaml header by set Active from True to False. Sections like Publication can be made to disappear in the same way.
-1. remove the Banner above the menu. Go to content >home folder and open file hero.md. Edit toml file heard by resetting the value of Active to False.
+1. Change biography section and update the Picture: Go to **content > author > admin** folder and open _index.md file to update your biography including education, email address, organization, and short biography. In the same folder, change the avatar.jpg to your picture
+1. Change the contact information: Go to **Config > _default** folder. Open Params.toml and update the email, contact, phone for yours.
+1. Delete contents. If you do not want to display talks you have given, go to content > home folder, Open file `talks.md` and edit the yaml header by setting value of Active from True to False. Sections like Publications can be made to disappear in the same way.
+1. remove the Banner above the menu. Go to **content > home** folder and open file `hero.md`. Edit toml file heard by resetting the value of Active to False.
 
-With above changes, the web site will have you name, picture, and biography. so, you become the owner of the web site. Now, you can push the content to your GitHub repository in your GitHub account. 
+With above changes, the web site will have you name, picture, and biography. so, you become the owner of the web site. Now, you can push the contents to your GitHub repository in your GitHub account. 
 
 
-### Step 3: Push content back to your GitHub account
+### Step 3: Push contents back to your GitHub account
 
 in the RStudio terminal folder, run below statement sequentially.
 
+```{r eval=FALSE}
 git add .
 
 git commit -m 'your comment about change'
 
 git push origin master
-
+```
 
 ### Step 4: Deploy contents to Netlify
 
-Go to the netlify web site <https://www.netlify.com/>.  Since this site allow you deploy your content directly from GitHub, you do not even need to set up account. with the site, you will see the page as below
+Go to the Netlify <https://www.netlify.com/>.  Since this site allows you to deploy your content directly from GitHub, you do not even need to set up account in Netlify. With the site, you will see the page as below
 
 ```{r, echo=FALSE,out.width = "75%"}
 library(knitr)  
@@ -123,16 +123,16 @@ include_graphics('/img/fig3_netlify.JPG')
 
 Make sure that you check the GitHub.  
 
-once your site is deployed, the netlify will assign a rand name to your subdomain like random-word-12345.netlify.com.netlify.com. You can change the random text to a more meaningful text. for example, I change the random text to be my dongsuncao so that my site address will be end up being <http://dongsuncao.netlify.com>.  
+Once your site is deployed, [Netlify](https://www.netlify.com) will assign a random name to your subdomain like random-word-12345.netlify.com. You can change the random text to a more meaningful text. For example, I changed the random text to be my name: dongsuncao so that my site address will be end up being <http://dongsuncao.netlify.com>.  
 
-then your site is live. you can access the site from anywhere and anytime. 
+Then your site is live. You can access the site from anywhere and anytime. 
 
 
 ### Recap:
 
-The steps I described here are very simplified and working procedure, but it allowed you to create and deploy your web site in shortest possible time. For each step, there maybe other way to do it. this is very important when you encounter issue, you have choices to get around the hurdle. For example, to upload the contents to the GitHub account, you can simply go to Tool >version control >commit. then you can add file you want to commit, once it is done, simply use Push button to upload the files to GitHub. 
+The steps I described here are a simplified but working procedure, but it allows you to create and deploy your web site in shortest possible time. For each step, there may be other ways to do it. This is very important when you encounter an issue, You have choices to get around the hurdle. For example, to upload the contents to the GitHub account, you can simply go to **Tool > version control >commit**. then you add file you want to commit, once it is done, simply use **Push** button to upload the files to GitHub. 
 
-To completely own the site, you need to work on more file.  For example, to post a blog, you can click on the Addins and click on the new post. 
+To completely own the site, you need to work on more files.  For example, to post a blog, you can click on the Addins and click on the new post. 
 
 
 ### Beyond the basics
