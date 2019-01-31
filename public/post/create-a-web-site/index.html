@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.3.0">
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dongsun Cao">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Get StartedPutting up your personal web site in the internet is everyone’s dream. There are numerous web site building platforms out there, like wix, [WordPress]https://wordpress.com/. Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.
+However, all those service comes with some of costs despite the cost may be minimal.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/create-a-web-site/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Dongsun Cao">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Dongsun Cao">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/create-a-web-site/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Dongsun Cao">
+  <meta property="og:url" content="/post/create-a-web-site/">
+  <meta property="og:title" content="A practial guide to create a web site in 4 steps using Blogdown | Dongsun Cao">
+  <meta property="og:description" content="Get StartedPutting up your personal web site in the internet is everyone’s dream. There are numerous web site building platforms out there, like wix, [WordPress]https://wordpress.com/. Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.
+However, all those service comes with some of costs despite the cost may be minimal."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-01-27T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-01-27T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>A practial guide to create a web site in 4 steps using Blogdown | Dongsun Cao</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/logo2.png" alt="Dongsun Cao"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/files/CV.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">A practial guide to create a web site in 4 steps using Blogdown</h1>
+
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2019-01-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2019-01-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Jan 27, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/r/">R</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=A%20practial%20guide%20to%20create%20a%20web%20site%20in%204%20steps%20using%20Blogdown&amp;url=%2fpost%2fcreate-a-web-site%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fcreate-a-web-site%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fcreate-a-web-site%2f&amp;title=A%20practial%20guide%20to%20create%20a%20web%20site%20in%204%20steps%20using%20Blogdown"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fcreate-a-web-site%2f&amp;title=A%20practial%20guide%20to%20create%20a%20web%20site%20in%204%20steps%20using%20Blogdown"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=A%20practial%20guide%20to%20create%20a%20web%20site%20in%204%20steps%20using%20Blogdown&amp;body=%2fpost%2fcreate-a-web-site%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="get-started" class="section level2">
+<h2>Get Started</h2>
+<p>Putting up your personal web site in the internet is everyone’s dream. There are numerous web site building platforms out there, like wix, [WordPress]<a href="https://wordpress.com/" class="uri">https://wordpress.com/</a>. Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.</p>
+<p>However, all those service comes with some of costs despite the cost may be minimal. You need to spend some to buy domain name and pay hosting service provider to host your web site. If you are in the business, you also need to pay for the business email address. if it is the first time for you build site and with purpose of sharing your knowledge, it is not worth doing that way. More importantly, those website building service would hide the coding from you, which is not desirable for programmers.</p>
+<p>it had appeared to me that there are quite a few of coding languages you need to master before you can put up a nice web site in the internet. For example, basic languages include HTML, CSS and JavaScript. Regarding the back-end language, you probably need to learn of these PHP, Java or Python. But it become so easy to create a web site when you use <strong>blogdown</strong> . There is no need to buy domain name and pay hosting service. With simply 4 steps under 10 minutes, you can make your professional web site available to the world.</p>
+<p>Below I am going to use 4 steps to show how to create a skeleton of website using Blogdown in R Studio. assuming you are a programmer and have a knowledge of R.</p>
+<div id="software-requirements" class="section level3">
+<h3>Software requirements</h3>
+<p>Assume you have already installed R (<a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>) <span class="citation">[@R-base]</span> and the RStudio IDE (<a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>).</p>
+<ol style="list-style-type: decimal">
+<li>install Blogdown in Studio IDE</li>
+<li>install Hugo</li>
+</ol>
+<pre class="r"><code>## Install from CRAN
+
+install.packages(&#39;blogdown&#39;) 
+
+## Or, install from GitHub
+
+if (!requireNamespace(&quot;devtools&quot;)) install.packages(&#39;devtools&#39;)
+
+devtools::install_github(&#39;rstudio/blogdown&#39;)
+
+blogdown::install_hugo()</code></pre>
+<p>Assume that you already have an GitHub account. If you do not have the account, go to the GitHub <a href="https://github.com/" class="uri">https://github.com/</a> and set up your account. It is free. Next, I am going to use 4 steps to show how to put up a skeleton of web site that is beautiful enough for you to deploy to the internet. Based on the skeleton website, you can work on R code (Markdown) to add contents to and modify your site continuously.</p>
+</div>
+<div id="step-1-create-a-repository-in-your-github-account" class="section level3">
+<h3>Step 1: Create a repository in your GitHub account</h3>
+<p>Once you have set up your GitHub account, create a new repository.</p>
+<p><img src="/img/fig1_gitnew.JPG" width="75%" /></p>
+</div>
+<div id="step-2-in-r-studio-create-a-project-using-version-control" class="section level3">
+<h3>Step 2: in R studio, create a project using version control</h3>
+<p>Now working on the local machine.</p>
+<p>Create a project from R studio by following this sequence of clicks: File &gt; New Project &gt; Version Control &gt; Git. You will end up with a window below</p>
+<p><img src="/img/fig2_rProj.JPG" width="75%" /></p>
+<ul>
+<li><strong>Repository URL</strong>: copy the URL site from your repository in the GitHub here.</li>
+<li><strong>Project Reposition Name</strong>: put down the directory name you want to call here. this is working folder that hold your files.</li>
+<li><strong>Create Project as Subdirectory of</strong>: The folder you want to place your project folder.</li>
+</ul>
+<p>Once you click the create Project, the repository will be cloned to your local machine, right now it is till empty. next step is to create a website under the folder you just created. if you run it, then R will creare all the necessary file in your project folder.</p>
+<pre class="r"><code># for example, create a new site with the academic theme
+
+blogdown::new_site(theme = &quot;gcushen/hugo-academic&quot;, theme_example = TRUE)</code></pre>
+<p>then, got to menu Addins &gt; Serve site. You will see a website is created in the Viewer panel on the right panel.</p>
+<p>But this is a template site, you need to change the site name, menu, contact information to make it become your web site. Below is a minimal set of files you need to update.</p>
+<ol style="list-style-type: decimal">
+<li>Change to your biography and Picture: Go to content&gt;author&gt;admin folder and open _index.md file to update your biography including education, email address, organization, and short biography. In the same folder, change the avatar.jpg to your picture</li>
+<li>Change the contact information: Go to Config &gt; _default folder. Open Params.toml and update the email, contact, phone for yours.</li>
+<li>Delete contents. if you do not want to display the talks you have given, go to content &gt; home folder. Open file talks.md and edit the yaml header by set Active from True to False. Sections like Publication can be made to disappear in the same way.</li>
+<li>remove the Banner above the menu. Go to content &gt;home folder and open file hero.md. Edit toml file heard by resetting the value of Active to False.</li>
+</ol>
+<p>With above changes, the web site will have you name, picture, and biography. so, you become the owner of the web site. Now, you can push the content to your GitHub repository in your GitHub account.</p>
+</div>
+<div id="step-3-push-content-back-to-your-github-account" class="section level3">
+<h3>Step 3: Push content back to your GitHub account</h3>
+<p>in the RStudio terminal folder, run below statement sequentially.</p>
+<p>git add .</p>
+<p>git commit -m ‘your comment about change’</p>
+<p>git push origin master</p>
+</div>
+<div id="step-4-deploy-contents-to-netlify" class="section level3">
+<h3>Step 4: Deploy contents to Netlify</h3>
+<p>Go to the netlify web site <a href="https://www.netlify.com/" class="uri">https://www.netlify.com/</a>. Since this site allow you deploy your content directly from GitHub, you do not even need to set up account. with the site, you will see the page as below</p>
+<p><img src="/img/fig3_netlify.JPG" width="75%" /></p>
+<p>Make sure that you check the GitHub.</p>
+<p>once your site is deployed, the netlify will assign a rand name to your subdomain like random-word-12345.netlify.com.netlify.com. You can change the random text to a more meaningful text. for example, I change the random text to be my dongsuncao so that my site address will be end up being <a href="http://dongsuncao.netlify.com" class="uri">http://dongsuncao.netlify.com</a>.</p>
+<p>then your site is live. you can access the site from anywhere and anytime.</p>
+</div>
+<div id="recap" class="section level3">
+<h3>Recap:</h3>
+<p>The steps I described here are very simplified and working procedure, but it allowed you to create and deploy your web site in shortest possible time. For each step, there maybe other way to do it. this is very important when you encounter issue, you have choices to get around the hurdle. For example, to upload the contents to the GitHub account, you can simply go to Tool &gt;version control &gt;commit. then you can add file you want to commit, once it is done, simply use Push button to upload the files to GitHub.</p>
+<p>To completely own the site, you need to work on more file. For example, to post a blog, you can click on the Addins and click on the new post.</p>
+</div>
+<div id="beyond-the-basics" class="section level3">
+<h3>Beyond the basics</h3>
+<p>If you want to learn more, please read Allison’s blog <a href="https://alison.rbind.io/post/up-and-running-with-blogdown/" class="uri">https://alison.rbind.io/post/up-and-running-with-blogdown/</a> and doumention in GitHub <a href="https://github.com/rstudio/blogdown/tree/master/docs" class="uri">https://github.com/rstudio/blogdown/tree/master/docs</a></p>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r-markdown/">R Markdown</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    <script src="/js/academic.min.07fbebbbf71b021c8836e1d7ecffa489.js"></script>
+
+    
+
+  </body>
+</html>
+

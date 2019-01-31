@@ -20,6 +20,98 @@
     </item>
     
     <item>
+      <title>A practial guide to create a web site in 4 steps using Blogdown</title>
+      <link>/post/create-a-web-site/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/create-a-web-site/</guid>
+      <description>
+
+
+&lt;div id=&#34;get-started&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Get Started&lt;/h2&gt;
+&lt;p&gt;Putting up your personal web site in the internet is everyone’s dream. There are numerous web site building platforms out there, like wix, [WordPress]&lt;a href=&#34;https://wordpress.com/&#34; class=&#34;uri&#34;&gt;https://wordpress.com/&lt;/a&gt;. Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.&lt;/p&gt;
+&lt;p&gt;However, all those service comes with some of costs despite the cost may be minimal. You need to spend some to buy domain name and pay hosting service provider to host your web site. If you are in the business, you also need to pay for the business email address. if it is the first time for you build site and with purpose of sharing your knowledge, it is not worth doing that way. More importantly, those website building service would hide the coding from you, which is not desirable for programmers.&lt;/p&gt;
+&lt;p&gt;it had appeared to me that there are quite a few of coding languages you need to master before you can put up a nice web site in the internet. For example, basic languages include HTML, CSS and JavaScript. Regarding the back-end language, you probably need to learn of these PHP, Java or Python. But it become so easy to create a web site when you use &lt;strong&gt;blogdown&lt;/strong&gt; . There is no need to buy domain name and pay hosting service. With simply 4 steps under 10 minutes, you can make your professional web site available to the world.&lt;/p&gt;
+&lt;p&gt;Below I am going to use 4 steps to show how to create a skeleton of website using Blogdown in R Studio. assuming you are a programmer and have a knowledge of R.&lt;/p&gt;
+&lt;div id=&#34;software-requirements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Software requirements&lt;/h3&gt;
+&lt;p&gt;Assume you have already installed R (&lt;a href=&#34;https://www.r-project.org&#34; class=&#34;uri&#34;&gt;https://www.r-project.org&lt;/a&gt;) &lt;span class=&#34;citation&#34;&gt;[@R-base]&lt;/span&gt; and the RStudio IDE (&lt;a href=&#34;https://www.rstudio.com&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com&lt;/a&gt;).&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;install Blogdown in Studio IDE&lt;/li&gt;
+&lt;li&gt;install Hugo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Install from CRAN
+
+install.packages(&amp;#39;blogdown&amp;#39;) 
+
+## Or, install from GitHub
+
+if (!requireNamespace(&amp;quot;devtools&amp;quot;)) install.packages(&amp;#39;devtools&amp;#39;)
+
+devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)
+
+blogdown::install_hugo()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Assume that you already have an GitHub account. If you do not have the account, go to the GitHub &lt;a href=&#34;https://github.com/&#34; class=&#34;uri&#34;&gt;https://github.com/&lt;/a&gt; and set up your account. It is free. Next, I am going to use 4 steps to show how to put up a skeleton of web site that is beautiful enough for you to deploy to the internet. Based on the skeleton website, you can work on R code (Markdown) to add contents to and modify your site continuously.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-1-create-a-repository-in-your-github-account&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Step 1: Create a repository in your GitHub account&lt;/h3&gt;
+&lt;p&gt;Once you have set up your GitHub account, create a new repository.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/fig1_gitnew.JPG&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2-in-r-studio-create-a-project-using-version-control&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Step 2: in R studio, create a project using version control&lt;/h3&gt;
+&lt;p&gt;Now working on the local machine.&lt;/p&gt;
+&lt;p&gt;Create a project from R studio by following this sequence of clicks: File &amp;gt; New Project &amp;gt; Version Control &amp;gt; Git. You will end up with a window below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/fig2_rProj.JPG&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Repository URL&lt;/strong&gt;: copy the URL site from your repository in the GitHub here.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Reposition Name&lt;/strong&gt;: put down the directory name you want to call here. this is working folder that hold your files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create Project as Subdirectory of&lt;/strong&gt;: The folder you want to place your project folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you click the create Project, the repository will be cloned to your local machine, right now it is till empty. next step is to create a website under the folder you just created. if you run it, then R will creare all the necessary file in your project folder.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# for example, create a new site with the academic theme
+
+blogdown::new_site(theme = &amp;quot;gcushen/hugo-academic&amp;quot;, theme_example = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then, got to menu Addins &amp;gt; Serve site. You will see a website is created in the Viewer panel on the right panel.&lt;/p&gt;
+&lt;p&gt;But this is a template site, you need to change the site name, menu, contact information to make it become your web site. Below is a minimal set of files you need to update.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Change to your biography and Picture: Go to content&amp;gt;author&amp;gt;admin folder and open _index.md file to update your biography including education, email address, organization, and short biography. In the same folder, change the avatar.jpg to your picture&lt;/li&gt;
+&lt;li&gt;Change the contact information: Go to Config &amp;gt; _default folder. Open Params.toml and update the email, contact, phone for yours.&lt;/li&gt;
+&lt;li&gt;Delete contents. if you do not want to display the talks you have given, go to content &amp;gt; home folder. Open file talks.md and edit the yaml header by set Active from True to False. Sections like Publication can be made to disappear in the same way.&lt;/li&gt;
+&lt;li&gt;remove the Banner above the menu. Go to content &amp;gt;home folder and open file hero.md. Edit toml file heard by resetting the value of Active to False.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With above changes, the web site will have you name, picture, and biography. so, you become the owner of the web site. Now, you can push the content to your GitHub repository in your GitHub account.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3-push-content-back-to-your-github-account&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Step 3: Push content back to your GitHub account&lt;/h3&gt;
+&lt;p&gt;in the RStudio terminal folder, run below statement sequentially.&lt;/p&gt;
+&lt;p&gt;git add .&lt;/p&gt;
+&lt;p&gt;git commit -m ‘your comment about change’&lt;/p&gt;
+&lt;p&gt;git push origin master&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-4-deploy-contents-to-netlify&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Step 4: Deploy contents to Netlify&lt;/h3&gt;
+&lt;p&gt;Go to the netlify web site &lt;a href=&#34;https://www.netlify.com/&#34; class=&#34;uri&#34;&gt;https://www.netlify.com/&lt;/a&gt;. Since this site allow you deploy your content directly from GitHub, you do not even need to set up account. with the site, you will see the page as below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/fig3_netlify.JPG&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Make sure that you check the GitHub.&lt;/p&gt;
+&lt;p&gt;once your site is deployed, the netlify will assign a rand name to your subdomain like random-word-12345.netlify.com.netlify.com. You can change the random text to a more meaningful text. for example, I change the random text to be my dongsuncao so that my site address will be end up being &lt;a href=&#34;http://dongsuncao.netlify.com&#34; class=&#34;uri&#34;&gt;http://dongsuncao.netlify.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;then your site is live. you can access the site from anywhere and anytime.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recap&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Recap:&lt;/h3&gt;
+&lt;p&gt;The steps I described here are very simplified and working procedure, but it allowed you to create and deploy your web site in shortest possible time. For each step, there maybe other way to do it. this is very important when you encounter issue, you have choices to get around the hurdle. For example, to upload the contents to the GitHub account, you can simply go to Tool &amp;gt;version control &amp;gt;commit. then you can add file you want to commit, once it is done, simply use Push button to upload the files to GitHub.&lt;/p&gt;
+&lt;p&gt;To completely own the site, you need to work on more file. For example, to post a blog, you can click on the Addins and click on the new post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;beyond-the-basics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Beyond the basics&lt;/h3&gt;
+&lt;p&gt;If you want to learn more, please read Allison’s blog &lt;a href=&#34;https://alison.rbind.io/post/up-and-running-with-blogdown/&#34; class=&#34;uri&#34;&gt;https://alison.rbind.io/post/up-and-running-with-blogdown/&lt;/a&gt; and doumention in GitHub &lt;a href=&#34;https://github.com/rstudio/blogdown/tree/master/docs&#34; class=&#34;uri&#34;&gt;https://github.com/rstudio/blogdown/tree/master/docs&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Shiny Application: Use of Cluster Anlysis to Detect Multiple Enrollments in Clinical Trials</title>
       <link>/post/shiny-application-use-of-cluster-anlysis/</link>
       <pubDate>Sat, 26 Jan 2019 00:00:00 +0000</pubDate>
@@ -32,10 +124,14 @@
 &lt;h2&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Multiple enrollment refers to a practice of a patient taking part in a clinical trial at more than two sites within same study or in multiple studies within same clinical program.&lt;/p&gt;
 &lt;p&gt;Patients seek multiple enrollments for a variety of reasons. Some seek more access to the study drugs while others are seeking additional compensations. Whatever reasons, multiple enrollments by a single patient at different sites in a study or across studies compromises the data integrity and jeopardizes the patient’s safety.&lt;/p&gt;
-&lt;p&gt;A web application was developed to facilitate identification of possible multiple participation by same subjects using Shiny platform. In this application, subjects with identical date of birth are identified and their similarity measures are plotted against the birth dates using Plotly. Subjects are clustered based on the similarity measures. The bar graph of similarity measures against birth dates is used to select the subjects with same birth dates and to update the dendrogram to visualize the extent of their similarity with regard to the findings in domains LB, EG, and VS. Concurrently, the pattern of medical history and concomitant medications for selected subjects are demonstrated in the lower panel of the dashboard (Figure 1).&lt;/p&gt;
+&lt;p&gt;A web application was developed to facilitate identification of possible multiple participation by same subjects using Shiny platform. In this application, subjects with identical date of birth are identified and their similarity measures are plotted against the birth dates using Plotly. Subjects are clustered based on the similarity measures. The bar graph of similarity measures against birth dates is used to select the subjects with same birth dates and to update the dendrogram to visualize the extent of their similarity with regard to the findings in domains LB, EG, and VS. Concurrently, the pattern of medical history and concomitant medications for selected subjects are compared in the lower panel of the dashboard (Figure 1).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/mddash.jpg&#34; width=&#34;95%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Figre 1. A Dashboard to Show Similarity Measures, Clusters, Medical History, and Conmmitant Medicaitons for Subejcts with Same Birth Dates&lt;/p&gt;
 &lt;p&gt;From the Figure 1, subjects with same date of birth are identified in the bar graph. Clicking on the bar will select the subject IDs and highlight cluster in the dendrogram allowing for visualization of extent of similarity. The two graphs in the lower panel compare the medical history and concomitant medication before they get enrolled.&lt;/p&gt;
+&lt;!-- ![](https://unsplash.com/photos/lFHPiO7OFWE)](https://www.youtube.com/watch?v=xyz) --&gt;
+&lt;!-- This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;. --&gt;
+&lt;!-- &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/6A5EpqqDOdk&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt; --&gt;
+&lt;!-- When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this: --&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MC_Drei-Finger-Faultier.jpg/330px-MC_Drei-Finger-Faultier.jpg&#34; width=&#34;95%&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>

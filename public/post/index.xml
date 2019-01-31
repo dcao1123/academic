@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>A practial guide to create a web site in 4 steps using Blogdown</title>
+      <link>/post/create-a-web-site/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/create-a-web-site/</guid>
+      <description>Get StartedPutting up your personal web site in the internet is everyone’s dream. There are numerous web site building platforms out there, like wix, [WordPress]https://wordpress.com/. Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.
+However, all those service comes with some of costs despite the cost may be minimal.</description>
+    </item>
+    
+    <item>
       <title>Shiny Application: Use of Cluster Anlysis to Detect Multiple Enrollments in Clinical Trials</title>
       <link>/post/shiny-application-use-of-cluster-anlysis/</link>
       <pubDate>Sat, 26 Jan 2019 00:00:00 +0000</pubDate>
