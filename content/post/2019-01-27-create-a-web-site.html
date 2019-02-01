@@ -1,5 +1,5 @@
 ---
-title: 'A practial guide to create a web site in 4 steps using Blogdown'
+title: 'A practical and concise guide to create a web site in 4 steps using Blogdown'
 author: Dongsun Cao
 date: '2019-01-27'
 slug: create-a-web-site
@@ -63,7 +63,7 @@ blogdown::new_site(theme = &quot;gcushen/hugo-academic&quot;, theme_example = TR
 <p>But this is a template which does not show your name and your blogs. You need to update them based on the temlpate files, YOu change site name, menu, contact information to make it become your web site. Below is a minimal set of files you need to update.</p>
 <ol style="list-style-type: decimal">
 <li>Change biography section and update the Picture: Go to <strong>content &gt; author &gt; admin</strong> folder and open _index.md file to update your biography including education, email address, organization, and short biography. In the same folder, change the avatar.jpg to your picture</li>
-<li>Change the contact information: Go to **Config &gt; _default** folder. Open Params.toml and update the email, contact, phone for yours.</li>
+<li>Change the contact information: Go to <strong>Config &gt;default</strong> folder. Open Params.toml and update the email, contact, phone for yours.</li>
 <li>Delete contents. If you do not want to display talks you have given, go to content &gt; home folder, Open file <code>talks.md</code> and edit the yaml header by setting value of Active from True to False. Sections like Publications can be made to disappear in the same way.</li>
 <li>remove the Banner above the menu. Go to <strong>content &gt; home</strong> folder and open file <code>hero.md</code>. Edit toml file heard by resetting the value of Active to False.</li>
 </ol>
