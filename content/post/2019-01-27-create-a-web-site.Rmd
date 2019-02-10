@@ -1,5 +1,5 @@
 ---
-title: 'A practical and concise guide to create a web site in 4 steps using Blogdown'
+title: 'A concise guide to create a web site in 4 steps using Blogdown'
 author: Dongsun Cao
 date: '2019-01-27'
 slug: create-a-web-site
@@ -14,11 +14,11 @@ image:
 
 ## **Get Started:**
 
-Putting up your personal web site in the internet is everyone's dream. There are numerous web site building platforms out there, like [Wix](https://www.wix.com/)  or [WordPress](<https://wordpress.com/>). Of those sites, WordPress is the most popular. It provides you a suite of serve to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know Programming like HTML, CSS, and JavaScript.
+Putting up your personal web site in the internet is everyone's dream. There are numerous web site building platforms out there, like [Wix](https://www.wix.com/)  or [WordPress](<https://wordpress.com/>). Of those tools, WordPress is the most popular. It provides you a suite of service to create a beautiful web site, either blog or e-commence site. Using WordPress, you do not need to know how to code like HTML, CSS, and JavaScript.
 
-However, all those service comes with some of costs despite the cost may be minimal. You need to spend some to buy domain name and pay hosting service provider to host your web site. If you are in the business, you also need to pay for the business email address. if it is the first time for you build site and with purpose of sharing your knowledge, it is not worth doing that way. More importantly, those website building service would hide the coding from you, which is not desirable for programmers. 
+However, all those service comes with some of costs despite the cost may be minimal. For example, you need to stay committed financially to buy domain name and pay hosting service provider to host your web site. If you are in the business, you also need to pay for the business email address. If it is the first time for you build site and with purpose of sharing your knowledge, it is not worth doing that way. More importantly, those website building service would hide the coding from you, which is not desirable for programmers. 
 
-It had appeared to me that there are quite a few of coding languages you need to master before you can put up a nice web site in the internet. For example, basic languages include HTML, CSS and JavaScript. Regarding the back-end language, you probably need to learn of these PHP, Java or Python. But it become so easy to create a web site when you use **blogdown** . There is no need to buy domain name and pay hosting service. With simply 4 steps under 10 minutes, you can make your professional web site available to the world. 
+It had appeared to me that there are quite a few of coding languages you need to master before you can put up a nice web site in the internet. For example, basic languages include HTML, CSS and JavaScript. Regarding the back-end language, you probably need to learn PHP, Java or Python. But it become so easy to create a web site when you use R **blogdown** . It excludes the need to buy domain name and pay hosting service. With simply 4 steps under 10 minutes, you can make your professional web site available to the world. 
  
 Below I am going to use 4 steps to show how to create a skeleton of website using Blogdown in R Studio. assuming you are a programmer and have a knowledge of R.  
 
@@ -57,7 +57,6 @@ library(knitr)
 include_graphics('/img/fig1_gitnew.JPG') 
 
 ```
-
 
 ### Step 2: in R studio, create a project using version control
 
@@ -132,12 +131,12 @@ Then your site is live. You can access the site from anywhere and anytime.
 
 The steps I described here are a simplified but working procedure, but it allows you to create and deploy your web site in shortest possible time. For each step, there may be other ways to do it. This is very important when you encounter an issue, You have choices to get around the hurdle. For example, to upload the contents to the GitHub account, you can simply go to **Tool > version control >commit**. then you add file you want to commit, once it is done, simply use **Push** button to upload the files to GitHub. 
 
-To completely own the site, you need to work on more files.  For example, to post a blog, you can click on the Addins and click on the new post. 
+To completely own the site, you need to work on more files.  For example, to post a blog, you can click on Addins and click on the new post. 
 
 
 ### Beyond the basics
 
-If you want to learn more, please read Allison's blog <https://alison.rbind.io/post/up-and-running-with-blogdown/> and doumention in GitHub <https://github.com/rstudio/blogdown/tree/master/docs>
+If you want to learn more, please read Allison's blog <https://alison.rbind.io/post/up-and-running-with-blogdown/> and documention in GitHub <https://github.com/rstudio/blogdown/tree/master/docs>
 
 
 

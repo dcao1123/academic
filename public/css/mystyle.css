@@ -1,0 +1,17 @@
+.home-section #publications {
+  Background: blue;
+  color:red;
+  background-image: url("boards.jpg");
+
+}
+/*
+#publications {
+  color:red;
+  background-image: url("../img/boards.jpg");
+
+}
+*/
+
+#publications >.container h1 {
+   color:red;
+}

@@ -3,7 +3,7 @@ abstract: We take advantage of a platform provided by JMP and report development
 abstract_short: An application interface was developed using JMP scripting language. This user-friendly application interface KRI analyzer automates analysis of KRIs by intergrating different sources of data from multiple studies, applyling analytics to uncover the data patterns, anomalies, and trend in the clincal studies, allowing for visualization of KRIs in a dynamical and intercvie way.
 authors:
 - Dongsun Cao
-- Bharagav Reddy
+- Bhargava Reddy
 date: "2019-07-01T00:00:00-04:00"
 doi: ""
 draft: false
