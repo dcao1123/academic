@@ -20,6 +20,208 @@
     </item>
     
     <item>
+      <title>Use of Shiny and Leaflet to Monitor Observer Agreement in Psoriasis Assessments</title>
+      <link>/post/monitor-observer-agreement-in-psoriasis-assessment/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/monitor-observer-agreement-in-psoriasis-assessment/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;psoriasis&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Psoriasis&lt;/strong&gt;&lt;/h4&gt;
+Psoriasis (PSO) is a chronic inflammatory disease characterized by a series of linked cellular changes in the skin: hyperplasia of epidermal keratinocytes, vascular hyperplasia and ectasia, and infiltration of T lymphocytes, neutrophils, and other types of leukocytes in affected skin
+&lt;/p&gt;
+&lt;p&gt;In the clinical studies, Psoriasis severity are usually assessed by multiple methods including psoriasis area and severity index (PASI), Body surface Area (BSA), and Investigator’s Global Assessment (IGA).&lt;/p&gt;
+&lt;div id=&#34;pasi&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;&lt;strong&gt;PASI&lt;/strong&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;The PASI is the most commonly used and validated assessment for grading the severity of PSO in clinical studies (Feldman, 2004). The PASI quantifies the severity and extent of the disease and weighs these with the percentage of BSA involvement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bsa&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;&lt;strong&gt;BSA&lt;/strong&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;The percent area of involvement (BSA%) is estimated across 4 body areas; head, upper extremities, trunk, and lower extremities. Assessors will enter the degree of involvement for a given region on a scale of 0 to 6 (0=none; 1=1% to &amp;lt;10% affected, 2=10% to &amp;lt;30% affected, 3=30% to &amp;lt;50% affected, 4=50% to &amp;lt;70% affected, 5=70% to &amp;lt;90% affected, 6=90% to 100% affected).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iga&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;&lt;strong&gt;IGA&lt;/strong&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;The Investigator assesses the average redness, thickness, and scaliness of lesions in each body area (each on a 5 point scale); 0=clear, 1=almost clear, 2=mild, 3=moderate, 4=severe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The PASI score ranges from 0 to 72 with a higher score indicating increased disease severity. The PASI score and BSA can be translated into classification groups with 5-point scale to evaluate the agreement among these assessments.&lt;/p&gt;
+&lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Disease Severity by PASI, BSA, and IGA
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Severity
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+PASI Score
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+BSA
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+IGA
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Severe
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt; 20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt; 20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Severe/Moderate
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt;12 to &amp;lt;=20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt;10 to &amp;lt;=20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Moderate
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt; 3 to &amp;lt;=12
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt; 5 to &amp;lt;=10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Mild
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt;0 to &amp;lt;= 3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1 to &amp;lt;=5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Clear
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;observer-agreement-test&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Observer Agreement Test&lt;/strong&gt;&lt;/h4&gt;
+&lt;div id=&#34;kappa-statistic&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;&lt;strong&gt;Kappa Statistic&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;The simple Kappa agreement test (Cohen, 1960) is used to evaluate agreement between PASI, IGA and BSA. The key metric is the &lt;em&gt;Kappa coefficient&lt;/em&gt; (Cohen, 1960), defined as.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\kappa={\dfrac{\prod_{o} - \prod_e}{1 -\prod_ e}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&#34;math display&#34;&gt;\[\prod{_o}=\sum \pi_{ii}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;is the probability that observers agree&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interpretation&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;There is not a standardized interpretation of the kappa statistic. According to Landis and Koch, Kappa value between 0-0.20 are considered as slight agreement, 0.21-0.40 as fair, 0.41-0.60 as moderate, 0.61-0.80 as substantial, and 0.81-1 as almost perfect.&lt;/p&gt;
+&lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-2&#34;&gt;Table 2: &lt;/span&gt;Interpretations of Kappa Values
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Kappa Value
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Agreement
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0 -0.20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Slight
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.21 - 0.40
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Fair
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.41 -0.60
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Moderate
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.61 - 0.80
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Substantial
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.81 - 1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Almost Perfect
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A concise guide to create a web site in 4 steps using Blogdown</title>
       <link>/post/create-a-web-site/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>

@@ -1,0 +1,93 @@
+---
+title: Use of Shiny and Leaflet to Monitor Observer Agreement in Psoriasis Assessments
+author: Dongsun Cao
+date: '2019-02-10'
+slug: Monitor-observer-agreement-in-psoriasis-assessment
+categories:
+  - R
+tags:
+  - R Markdown
+image:
+  caption: ''
+  focal_point: ''
+---
+
+
+```{r setup, include=FALSE}
+
+# Load packages -----------------------------------------------------
+
+library(pacman)
+
+pacman::p_load(shiny, leaflet, highcharter,  dplyr, rgdal, RColorBrewer, vcd, reshape, purrr, ggrepel, DT, htmltools, knitr, kableExtra)
+
+```
+#### **Psoriasis** 
+
+
+Psoriasis (PSO) is a chronic inflammatory disease characterized by a series of linked cellular changes in the skin: hyperplasia of epidermal keratinocytes, vascular hyperplasia and ectasia, and infiltration of T lymphocytes, neutrophils, and other types of leukocytes in affected skin</p> 
+
+In the clinical studies, Psoriasis severity are usually assessed by multiple methods including psoriasis area and severity index (PASI), Body surface Area (BSA), and Investigator's Global Assessment (IGA).
+
+##### **PASI** 
+* The PASI is the most commonly used and validated assessment for grading the severity of PSO in clinical studies (Feldman, 2004). The PASI quantifies the severity and extent of the disease and weighs these with the percentage of BSA involvement.
+
+##### **BSA**
+
+* The percent area of involvement (BSA%) is estimated across 4 body areas; head, upper extremities, trunk, and lower extremities. Assessors will enter the degree of involvement for a given region on a scale of 0 to 6 (0=none; 1=1% to <10% affected, 2=10% to <30% affected, 3=30% to <50% affected, 4=50% to <70% affected, 5=70% to <90% affected, 6=90% to 100% affected).
+
+##### **IGA**
+
+* The Investigator assesses the average redness, thickness, and scaliness of lesions in each body area (each on a 5 point scale);  0=clear, 1=almost clear, 2=mild, 3=moderate, 4=severe.
+
+The PASI score ranges from 0 to 72 with a higher score indicating increased disease severity. The PASI score and BSA can be translated into classification groups with 5-point scale to evaluate the agreement among these assessments.
+
+
+```{r echo=FALSE, results='asis'}
+
+v1<-c("Severe", "Severe/Moderate", "Moderate", "Mild", "Clear")
+v2<-c('> 20', '>12 to <=20', '> 3 to <=12', '>0  to <= 3', '0')
+v3<-c('> 20', '>10 to <=20', '> 5 to <=10', '1 to <=5', '0')
+v4<-c('4', '3',  '2', '1', '0')
+data<-data.frame(v1, v2, v3, v4)
+names(data)<-c("Severity", 'PASI Score', 'BSA', 'IGA')
+
+# knitr::kable(data,caption="Categorization of Disease Severity by PASI, BSA, and IGA")
+
+kable(data, format = "html", align = c('l', 'l', 'l', 'c'), caption = "Disease Severity by PASI, BSA, and IGA ") %>%
+  kable_styling(bootstrap_options = "striped",
+                full_width = F) 
+
+```
+
+#### **Observer Agreement Test**
+
+##### **Kappa Statistic**
+
+The simple Kappa agreement test (Cohen, 1960) is used to evaluate agreement between PASI, IGA and BSA. The key metric is the *Kappa coefficient* (Cohen, 1960), defined as.  
+
+$$\kappa={\dfrac{\prod_{o} - \prod_e}{1 -\prod_ e}}$$
+
+
+where $$\prod{_o}=\sum \pi_{ii}$$ 
+
+is the probability that observers agree 
+
+##### **Interpretation**
+There is not a standardized interpretation of the kappa statistic. According to Landis and Koch, Kappa value between 0-0.20 are considered as slight agreement, 0.21-0.40 as fair, 0.41-0.60 as moderate, 0.61-0.80 as substantial, and 0.81-1 as almost perfect.
+
+```{r, echo = FALSE}
+
+v1<-c('0 -0.20', '0.21 - 0.40', '0.41 -0.60', '0.61 - 0.80', '0.81 - 1')
+v2<-c('Slight', 'Fair', 'Moderate', 'Substantial', 'Almost Perfect')
+
+data<-data.frame(v1, v2)
+names(data)<-c("Kappa Value", 'Agreement')
+
+kable(data, format = "html", align = c('l', 'l'), caption = "Interpretations of Kappa Values") %>%
+  kable_styling(bootstrap_options = "striped",  full_width = F) 
+  # add_footnote(c("Interpretation is based on the Landis and Koch (2000)."))
+
+
+```
+

@@ -1,0 +1,206 @@
+---
+title: Use of Shiny and Leaflet to Monitor Observer Agreement in Psoriasis Assessments
+author: Dongsun Cao
+date: '2019-02-10'
+slug: Monitor-observer-agreement-in-psoriasis-assessment
+categories:
+  - R
+tags:
+  - R Markdown
+image:
+  caption: ''
+  focal_point: ''
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div id="psoriasis" class="section level4">
+<h4><strong>Psoriasis</strong></h4>
+Psoriasis (PSO) is a chronic inflammatory disease characterized by a series of linked cellular changes in the skin: hyperplasia of epidermal keratinocytes, vascular hyperplasia and ectasia, and infiltration of T lymphocytes, neutrophils, and other types of leukocytes in affected skin
+</p>
+<p>In the clinical studies, Psoriasis severity are usually assessed by multiple methods including psoriasis area and severity index (PASI), Body surface Area (BSA), and Investigator’s Global Assessment (IGA).</p>
+<div id="pasi" class="section level5">
+<h5><strong>PASI</strong></h5>
+<ul>
+<li>The PASI is the most commonly used and validated assessment for grading the severity of PSO in clinical studies (Feldman, 2004). The PASI quantifies the severity and extent of the disease and weighs these with the percentage of BSA involvement.</li>
+</ul>
+</div>
+<div id="bsa" class="section level5">
+<h5><strong>BSA</strong></h5>
+<ul>
+<li>The percent area of involvement (BSA%) is estimated across 4 body areas; head, upper extremities, trunk, and lower extremities. Assessors will enter the degree of involvement for a given region on a scale of 0 to 6 (0=none; 1=1% to &lt;10% affected, 2=10% to &lt;30% affected, 3=30% to &lt;50% affected, 4=50% to &lt;70% affected, 5=70% to &lt;90% affected, 6=90% to 100% affected).</li>
+</ul>
+</div>
+<div id="iga" class="section level5">
+<h5><strong>IGA</strong></h5>
+<ul>
+<li>The Investigator assesses the average redness, thickness, and scaliness of lesions in each body area (each on a 5 point scale); 0=clear, 1=almost clear, 2=mild, 3=moderate, 4=severe.</li>
+</ul>
+<p>The PASI score ranges from 0 to 72 with a higher score indicating increased disease severity. The PASI score and BSA can be translated into classification groups with 5-point scale to evaluate the agreement among these assessments.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-1">Table 1: </span>Disease Severity by PASI, BSA, and IGA
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Severity
+</th>
+<th style="text-align:left;">
+PASI Score
+</th>
+<th style="text-align:left;">
+BSA
+</th>
+<th style="text-align:center;">
+IGA
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Severe
+</td>
+<td style="text-align:left;">
+&gt; 20
+</td>
+<td style="text-align:left;">
+&gt; 20
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Severe/Moderate
+</td>
+<td style="text-align:left;">
+&gt;12 to &lt;=20
+</td>
+<td style="text-align:left;">
+&gt;10 to &lt;=20
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Moderate
+</td>
+<td style="text-align:left;">
+&gt; 3 to &lt;=12
+</td>
+<td style="text-align:left;">
+&gt; 5 to &lt;=10
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mild
+</td>
+<td style="text-align:left;">
+&gt;0 to &lt;= 3
+</td>
+<td style="text-align:left;">
+1 to &lt;=5
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Clear
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="observer-agreement-test" class="section level4">
+<h4><strong>Observer Agreement Test</strong></h4>
+<div id="kappa-statistic" class="section level5">
+<h5><strong>Kappa Statistic</strong></h5>
+<p>The simple Kappa agreement test (Cohen, 1960) is used to evaluate agreement between PASI, IGA and BSA. The key metric is the <em>Kappa coefficient</em> (Cohen, 1960), defined as.</p>
+<p><span class="math display">\[\kappa={\dfrac{\prod_{o} - \prod_e}{1 -\prod_ e}}\]</span></p>
+<p>where <span class="math display">\[\prod{_o}=\sum \pi_{ii}\]</span></p>
+<p>is the probability that observers agree</p>
+</div>
+<div id="interpretation" class="section level5">
+<h5><strong>Interpretation</strong></h5>
+<p>There is not a standardized interpretation of the kappa statistic. According to Landis and Koch, Kappa value between 0-0.20 are considered as slight agreement, 0.21-0.40 as fair, 0.41-0.60 as moderate, 0.61-0.80 as substantial, and 0.81-1 as almost perfect.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-2">Table 2: </span>Interpretations of Kappa Values
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Kappa Value
+</th>
+<th style="text-align:left;">
+Agreement
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+0 -0.20
+</td>
+<td style="text-align:left;">
+Slight
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+0.21 - 0.40
+</td>
+<td style="text-align:left;">
+Fair
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+0.41 -0.60
+</td>
+<td style="text-align:left;">
+Moderate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+0.61 - 0.80
+</td>
+<td style="text-align:left;">
+Substantial
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+0.81 - 1
+</td>
+<td style="text-align:left;">
+Almost Perfect
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
